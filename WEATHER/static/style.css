@@ -1,0 +1,113 @@
+body {
+    font-family: 'Times New Roman', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Send video behind other elements */
+}
+
+#bg-video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Cover the entire background */
+}
+
+.chat-container {
+    background: radial-gradient(circle, #00ffff, #008b8b); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 650px;
+    padding: 20px;
+    position: relative;
+    margin: 50px auto; /* Center the chat container */
+    backdrop-filter: blur(10px); /* Blur effect */
+    right: 17%;
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: #d1e7dd;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: right; /* Align text to the right */
+}
+
+.bot-message {
+    align-self: flex-start;
+    background-color: #f8d7da;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: left; /* Align text to the left */
+}
+
+#user-input {
+    width: calc(100% - 90px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+#user-input:focus {
+    border-color: #28a745; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+#send-button {
+    padding: 10px;
+    border: none;
+    background-color: #116424;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#send-button:hover {
+    background-color: #218838;
+}
+
+.loading {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 14px;
+    color: #888;
+}
+
+h1 {
+    font-size: 3.5em; /* Increase font size */
+    background: linear-gradient(to right, #001f3f, #0074D9); /* Gradient from Navy Blue to Dodger Blue */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Make the text color transparent */
+    text-shadow: none; /* No shadow for clarity */
+    margin: 20px 0; /* Add margin */
+}
