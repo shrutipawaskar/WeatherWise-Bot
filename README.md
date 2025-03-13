@@ -1,1 +1,0 @@
-# WeatherWise-Bot
